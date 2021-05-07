@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Department>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <tr>
+                    <th>@Html.DisplayNameFor(model=>model.Name)</th>
+                    <th>@Html.DisplayNameFor(model=>model.Location)</th>
+                    <th>@Html.DisplayNameFor(model => model.EmployeeCount)</th>
+                    <th>操作</th>
+                </tr>
+                @Html.DisplayForModel()
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a asp-action="Add">Add</a>
+        </div>
+    </div>

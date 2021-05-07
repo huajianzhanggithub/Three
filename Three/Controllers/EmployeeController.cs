@@ -25,7 +25,7 @@ namespace Three.Controllers
             ViewBag.Title = $"Employees of {department.Name}";
             ViewBag.DepartmentId = departmentId;
 
-            var employees = _employeeService.GetByDepartmentId(departmentId);
+            var employees =await _employeeService.GetByDepartmentId(departmentId);
             return View(employees);
         }
 
@@ -47,8 +47,8 @@ namespace Three.Controllers
 
         public async Task<IActionResult> Fire(int employeeId)
         {
-            var employee = _employeeService.Fire(employeeId);
-            return RedirectToAction(nameof(Index), new { departmentId = employeeId });
+            var employee =await _employeeService.Fire(employeeId);
+            return RedirectToAction(nameof(Index), new { departmentId = employee.DepartmentId });
         }
     }
 }

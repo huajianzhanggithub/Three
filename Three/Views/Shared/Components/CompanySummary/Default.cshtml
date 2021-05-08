@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model CompanySummary
+
+<div>
+    <div class="h3">@ViewBag.Title</div>
+    <div class="row">
+        <div>员工总数:</div>
+        <div>@Model.EmployeeCount</div>
+    </div>
+    <div class="row">
+        <div>部门平均人数:</div>
+        <div>@Model.AverageDepartmentEmployeeCount</div>
+    </div>
+</div>

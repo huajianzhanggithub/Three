@@ -1,0 +1,24 @@
+﻿@model Employee
+
+<form asp-action="Add" class="d-flex flex-column offset-3 col-6">
+    <input type="hidden" asp-for="DepartmentId" />
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model => model.FirstName)</span>
+        </div>
+        <input type="text" class="form-control" placeholder="@Html.DisplayNameFor(model => model.FirstName)" asp-for="FirstName">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model => model.LastName)</span>
+        </div>
+        <input type="text" class="form-control" placeholder="@Html.DisplayNameFor(model => model.LastName)" asp-for="LastName">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model => model.Gender)</span>
+        </div>
+            <select class="form-control" asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()"></select>
+    </div>
+    <button type="submit" class="btn btn-primary align-self-center">Add</button>
+</form>

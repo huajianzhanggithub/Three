@@ -17,3 +17,7 @@
             <a asp-action="Add">Add</a>
         </div>
     </div>
+    <div>
+        @await Component.InvokeAsync("CompanySummary",new { title="部门列表页的汇总"})
+        <vc:company-summary title="部门列表页的汇总2"></vc:company-summary>
+    </div>

@@ -1,0 +1,23 @@
+﻿@model Department
+
+<form asp-action="Add" class="d-flex flex-column offset-3 col-6">
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model=>model.Name)</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Name" asp-for="Name">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model => model.Location)</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Location" asp-for="Location">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+            <span class="input-group-text">@Html.DisplayNameFor(model => model.EmployeeCount)</span>
+        </div>
+        <input type="text" class="form-control" placeholder="EmployeeCount" asp-for="EmployeeCount">
+    </div>
+    <button type="submit" class="btn btn-primary align-self-center">Add</button>
+</form>
